@@ -1,11 +1,7 @@
 import numpy as np
-# from utils.helper_methods import str_to_float, pwr_to_float
 
 
-#
-#   Base classes
-#
-
+# Base classes ----------------------------------------------------------------
 
 class PulseBase:
     def __init__(self, ch, dur, t0=0):
@@ -26,9 +22,7 @@ class DfltPulseBase:
         )
 
 
-#
-#   Pulse classes
-#
+# Pulse classes ---------------------------------------------------------------
 
 class PTrue(PulseBase):
 
@@ -95,10 +89,8 @@ class PConst(PulseBase):
 
         return ret_ar
 
-#
-#   Default Pulse classes
-#
 
+# Default Pulse classes -------------------------------------------------------
 
 class DFalse(DfltPulseBase):
 

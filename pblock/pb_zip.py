@@ -1,4 +1,4 @@
-import pylabnet.logic.pulsed.pulse_block as pb
+import pblock.pulse_block as pb
 import numpy as np
 import copy
 
@@ -199,7 +199,7 @@ def pb_zip(pb_obj, dur_quant):
 
 
 def pb_expand_test(res_dict, indicate_bounds=True):
-    """ Helper method to test and pb_zip()
+    """ Helper method to test pb_zip()
 
     This method takes direct output res_dict of pb_zip() call and reconstructs
     the original pulse block according to the sequence.
@@ -214,7 +214,7 @@ def pb_expand_test(res_dict, indicate_bounds=True):
     :return: (PulseBlock) reconstructed plain waveform
     """
 
-    import pylabnet.logic.pulsed.pulse as po
+    import pblock.pulse as po
 
     new_pb = pb.PulseBlock()
 
