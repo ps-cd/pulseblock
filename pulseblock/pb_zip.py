@@ -1,4 +1,4 @@
-import pblock.pulse_block as pb
+import pulseblock.pulse_block as pb
 import numpy as np
 import copy
 
@@ -214,7 +214,7 @@ def pb_expand_test(res_dict, indicate_bounds=True):
     :return: (PulseBlock) reconstructed plain waveform
     """
 
-    import pblock.pulse as po
+    import pulseblock.pulse as po
 
     new_pb = pb.PulseBlock()
 
