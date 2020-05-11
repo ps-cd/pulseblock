@@ -4,6 +4,13 @@ import numpy as np
 def pb_sample(pb_obj, samp_rate, len_min=0, len_max=float('inf'), len_step=1, len_adj=True, debug=False):
     """ Generate sample array.
 
+    Unlike PulseBlock class, which makes now assumptions beyond the base class
+    attributes, this function introduces one more requirement:
+        each Pulse and DfltPulse object in the block must have
+        get_value(t_ar) method with the following signature:
+            :param t_ar: (numpy.array) array of time points
+            :return: (numpy.array) array of samples
+
     :param pb_obj: (PulseBlock) pulse block to be sampled
     :param samp_rate: (float) sampling rate [Hz]
 
